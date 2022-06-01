@@ -17,5 +17,6 @@ RUN keytool -genkeypair -storepass password -storetype PKCS12 -keyalg RSA -keysi
 ENV KC_DB_URL=jdbc:postgresql://192.168.0.101:5433/access
 ENV KC_DB_USERNAME=ttkmw
 ENV KC_DB_PASSWORD=chillvibe
+ENV KC_HOSTNAME=localhost
 
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start"]
