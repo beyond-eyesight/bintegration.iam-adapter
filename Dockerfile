@@ -14,7 +14,7 @@ WORKDIR /opt/keycloak
 # for demonstration purposes only, please make sure to use proper certificates in production instead
 RUN keytool -genkeypair -storepass password -storetype PKCS12 -keyalg RSA -keysize 2048 -dname "CN=server" -alias server -ext "SAN:c=DNS:localhost,IP:127.0.0.1" -keystore conf/server.keystore
 # change these values to point to a running postgres instance
-ENV KC_DB_URL=jdbc:postgresql://192.168.0.100:5433/access
+ENV KC_DB_URL=jdbc:postgresql://test-access-2.cuwocpon5oew.ap-northeast-2.rds.amazonaws.com:5432/iam
 ENV KC_DB_USERNAME=ttkmw
 ENV KC_DB_PASSWORD=chillvibe
 ENV KC_HOSTNAME=localhost
