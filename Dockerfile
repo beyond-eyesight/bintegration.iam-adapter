@@ -18,7 +18,7 @@ ENV KC_DB_URL=jdbc:postgresql://test-access-2.cuwocpon5oew.ap-northeast-2.rds.am
 
 ENV KC_DB_USERNAME=ttkmw
 ENV KC_DB_PASSWORD=chillvibe
-ENV KC_HOSTNAME=localhost
+#ENV KC_HOSTNAME=localhost
 ENV KEYCLOAK_ADMIN=admin
 ENV KEYCLOAK_ADMIN_PASSWORD=Pa55w0rd
 
