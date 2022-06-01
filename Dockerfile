@@ -22,4 +22,4 @@ ENV KC_DB_PASSWORD=chillvibe
 ENV KEYCLOAK_ADMIN=admin
 ENV KEYCLOAK_ADMIN_PASSWORD=Pa55w0rd
 
-ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start"]
+ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start --hostname-strict=false"]
