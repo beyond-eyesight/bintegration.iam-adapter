@@ -1,0 +1,28 @@
+name: "Tag Release"
+description: "tag release"
+author: "beyondeyesight"
+
+branding:
+  icon: 'box'
+  color: 'green'
+
+inputs:
+  GITHUB_TOKEN:
+    description: "access token for github api"
+    required: true
+  BUILD_NAME:
+    description: "build name"
+    required: true
+  GITHUB_REPOSITORY:
+    description: "full name of git repository. ex: beyond-eyesight/chat"
+    required: true
+  GITHUB_API_URL:
+    description: "http api url of github"
+    required: true
+  GITHUB_TARGET_BRANCH:
+    description: "target branch to merge"
+    required: true
+    default: main
+runs:
+  using: "docker"
+  image: "Dockerfile"
