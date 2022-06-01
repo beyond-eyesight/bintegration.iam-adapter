@@ -1,0 +1,23 @@
+{
+  "inferenceAccelerators": [],
+  "containerDefinitions": [
+    {
+      "name": "access",
+      "image": "access:latest",
+      "resourceRequirements": null,
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": "8443",
+          "hostPort": "8443",
+          "protocol": "tcp"
+        }
+      ]
+    }
+  ],
+  "executionRoleArn": null,
+  "memory": "512",
+  "cpu": "256",
+  "family": "access-task",
+  "volumes": []
+}
