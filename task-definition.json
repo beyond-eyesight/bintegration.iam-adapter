@@ -2,8 +2,8 @@
   "inferenceAccelerators": [],
   "containerDefinitions": [
     {
-      "name": "access",
-      "image": "access:latest",
+      "name": "iam",
+      "image": "iam:latest",
       "resourceRequirements": null,
       "essential": true,
       "portMappings": [
@@ -18,6 +18,6 @@
   "executionRoleArn": null,
   "memory": "512",
   "cpu": "256",
-  "family": "access-task",
+  "family": "iam-task",
   "volumes": []
 }
