@@ -12,9 +12,25 @@ repositories {
     mavenCentral()
 }
 
+//dependencyManagement {
+//    imports {
+//        mavenBom "org.keycloak.bom:keycloak-adapter-bom:18.0.0"
+//    }
+//}
+
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-hateoas'
+    implementation 'org.springframework.hateoas:spring-hateoas'
+//    implementation 'org.keycloak:keycloak-spring-boot-starter:18.0.0'
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.3.3'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.mockito:mockito-core'
+    runtimeOnly 'com.h2database:h2'
 }
 
 tasks.named('test') {

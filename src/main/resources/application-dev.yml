@@ -1,0 +1,5 @@
+keycloak:
+  auth-server-url: https://localhost:8443
+  ssl-required: external
+  use-resource-role-mappings: true
+  bearer-only: true
