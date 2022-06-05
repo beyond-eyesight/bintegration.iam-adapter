@@ -1,2 +1,19 @@
 keycloak:
   auth-server-url: http://localhost:8443
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/iam
+    username: ttkmw
+    password: chillvibe
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        show-sql: true
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQL82Dialect
+    database-platform: org.hibernate.dialect
+    database: postgresql

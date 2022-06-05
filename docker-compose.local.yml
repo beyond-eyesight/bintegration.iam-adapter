@@ -1,0 +1,27 @@
+version: '3.3'
+
+volumes:
+  iam_data:
+    driver: local
+
+services:
+  postgres:
+    #    platform: linux/x86_64
+    image: postgres
+    user: postgres
+    #    todo: 이거 뭐였는지 기억이 안난다...
+    #    command: bash -c "
+    #      postgres &&
+    #      createuser -l \"auser\"
+    #      "
+    restart: always
+    environment:
+      POSTGRES_DB: iam
+      POSTGRES_USER: ttkmw
+      POSTGRES_PASSWORD: chillvibe
+      TZ: Asia/Seoul
+    volumes:
+      - iam_data:/var/lib/postgresql/data
+    container_name: iam
+    ports:
+      - "5433:5432"
