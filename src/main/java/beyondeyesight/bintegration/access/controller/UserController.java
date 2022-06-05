@@ -44,7 +44,7 @@ public class UserController {
     @GetMapping(value = "/admin/realms/{realmName}/users")
     public ResponseEntity<Object> findUserByUsername(@PathVariable String realmName, @RequestParam(value = "username") String username) {
         Realm realm = realmJpaRepository.findByName(realmName);
-        UserEntity userEntity = userEntityJpaRepository.findByRealmAndUsername(realm, username);
+        UserEntity userEntity = userEntityJpaRepository.findByUsername(realm, username);
         return ResponseEntity.ok(userEntity);
     }
 
